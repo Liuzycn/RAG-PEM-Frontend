@@ -1,0 +1,60 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 40px;
+    text-align: center;
+}
+
+select {
+  border: none;
+  background: none;
+  font-size: 16px;
+  cursor: pointer;
+  outline: none;
+}
+
+input {
+  flex: 1;
+  border: none;
+  font-size: 16px;
+  padding: 10px;
+  outline: none;
+}
+
+#result {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+    display: none;
+}
+#footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #000;
+    color: #fff;
+    padding: 1.5rem 0;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.2);
+    font-family: Arial, sans-serif;
+  }
+  
+  .footer-link {
+    color: #4dabf7;
+    transition: opacity 0.3s;
+  }
+  
+  .footer-link:hover {
+    opacity: 0.8;
+    text-decoration: none;
+  }
+  .banner-content {
+    max-width: 600px;  /* 控制内容区域最大宽度 */
+    margin-left: 0%;  /* 左侧留白控制 */
+    transform: translateY(20%); /* 垂直位置调整 */
+}
+  @media (max-width: 768px) {
+    #footer {
+      font-size: 0.9rem;
+      padding: 1rem 0;
+    }
+  }
