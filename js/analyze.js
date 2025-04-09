@@ -36,7 +36,7 @@ async function analyze() {
     chatBox.scrollTop = chatBox.scrollHeight;
 
     try {
-        let response = await fetch("http://26.26.26.1:5000/analyze", {//http:///analyze
+        let response = await fetch("https://web-production-1e1b7.up.railway.app/analyze", {//http:///analyze
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ query: query, model:model })
