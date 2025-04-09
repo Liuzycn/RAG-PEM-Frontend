@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>基于大模型的实时舆情事件挖掘平台</title>
+    <link href="css/base.css" rel="stylesheet">
+    <link href="css/function-search.css" rel="stylesheet">
+    <link href="css/function-output.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/animate.min.css" rel="stylesheet"> 
+    <link href="css/styles.css" rel="stylesheet"> 
+
+    <link rel="shortcut icon" href="images/ico/favicon.ico"> 
+</head>
+<body id="home" style>
+    <header id="header">
+        <nav id="main-nav" class="navbar navbar-default navbar-fixed-top" role="banner">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html"><img src="images/logo.png" alt="logo"></a>
+                </div>
+				
+                <div class="collapse navbar-collapse navbar-right">
+                    <ul class="nav navbar-nav">
+                        <li class="scroll active"><a href="#home">主页</a></li>  
+                        <li class="scroll"><a href="#services">简介</a></li>
+                        <li class="scroll"><a href="#section-header">核心功能</a></li> 
+                        <li class="scroll"><a href="#contact-us">联系</a></li>                        
+                    </ul>
+                </div>
+            </div><!--/.container-->
+        </nav><!--/nav-->
+    </header><!--/header-->
+
+    <section id="hero-banner">
+        <div class="banner-inner">
+               <div class="container">
+                   <div class="row">
+                       <div class="col-sm-12">
+                               <h2>大模型智能分析，预测 <b>舆情走向</b></h2>
+                               <p>智能洞察未来，精准预警舆情 <br/> 深度分析，精准预警</p>
+                               <a class="btn btn-primary btn-lg" href="#content">开始</a>
+                       </div>
+                   </div>
+               </div>
+           </div>
+    </section><!--/#main-slider-->
+
+    <section id="services" >
+        <div class="container">
+
+            <div class="section-header">
+                <h2 class="section-title wow fadeInDown">网页简介</h2>
+                <p class="wow fadeInDown">大模型智能分析，预测舆情走向 <br> 发现潜在风险，掌控舆情动态</p>
+            </div>
+
+            <div class="row">
+                <div class="features">
+                    <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-duration="300ms" data-wow-delay="0ms">
+                        <div class="media service-box">
+                            <div class="pull-left">
+                                <i class="fa fa-bar-chart"></i>
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading">数据来源</h4>
+                                <p>来自蚁坊软件，OpenDataLab等平台的10万条中英文数据，在去重和清洗后形成高质量数据集。</p>
+                            </div>
+                        </div>
+                    </div><!--/.col-md-4-->
+
+                    <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-duration="300ms" data-wow-delay="100ms">
+                        <div class="media service-box">
+                            <div class="pull-left">
+                                <i class="fa fa-database"></i>
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading">知识库构建</h4>
+                                <p>利用最新 sentence-transformers 编码模型 <a href="https://huggingface.co/sentence-transformers/all-mpnet-base-v2" target="_blank">all-mpnet-base-v2</a>，向量化处理数据，构建高质量且完善的知识库</p>
+                            </div>
+                        </div>
+                    </div><!--/.col-md-4-->
+
+                    <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-duration="300ms" data-wow-delay="200ms">
+                        <div class="media service-box">
+                            <div class="pull-left">
+                                <i class="fa fa-compass"></i>
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading">智能检索</h4>
+                                <p>利用FAISS进行语义匹配，计算用户输入与知识库中文本的相似度，精准获取与用户需求最相关的舆情信息。</p>
+                            </div>
+                        </div>
+                    </div><!--/.col-md-4-->
+                
+                    <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-duration="300ms" data-wow-delay="300ms">
+                        <div class="media service-box">
+                            <div class="pull-left">
+                                <i class="fa fa-futbol-o"></i>
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading">提示工程</h4>
+                                <p>结合知识检索优化提示词，能够精准定位知识缺口并生成针对性引导，提升大模型的分析效率与输出质量。</p>
+                            </div>
+                        </div>
+                    </div><!--/.col-md-4-->
+
+                    <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-duration="300ms" data-wow-delay="400ms">
+                        <div class="media service-box">
+                            <div class="pull-left">
+                                <i class="fa fa-paper-plane-o"></i>
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading">实时交互</h4>
+                                <p>基于Flask框架，实现实时交互，用户可以随时查询舆情信息，并实时获取最新动态。</p>
+                            </div>
+                        </div>
+                    </div><!--/.col-md-4-->
+
+                    <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-duration="300ms" data-wow-delay="500ms">
+                        <div class="media service-box">
+                            <div class="pull-left">
+                                <i class="fa fa-bullseye"></i>
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading">开发语言</h4>
+                                <p>前端基于HTML+CSS+JavaScript以及外部库Font Awesome与Bootstrap编写。后端利用Python Flask框架开发。</p>
+                            </div>
+                        </div>
+                    </div><!--/.col-md-4-->
+                </div>
+            </div><!--/.row-->    
+        </div><!--/.container-->
+    </section><!--/#services-->
+
+    <div class="section-header">
+        <h2 class="section-title wow fadeInDown">舆情分析与查询</h2>
+    </div>
+
+    <section id="search-container">
+            <select>
+                <option>deepseek-chat</option>
+                <option>deepseek-reasoner</option>
+                <option>doubao-1.5-pro</option>
+                <option>doubao-pro</option>
+            </select>
+            <textarea id="query" placeholder="请输入网络言论或事件..."></textarea>
+            <button class="search-btn" onclick="analyze()">🔍</button>
+            <img src="images/deepseek.jpg" alt="AI 图标" class="icon">
+    </section>
+
+    <section id="output-container">
+        <div class="chat-box" id="chat-box"></div>
+    </section>
+
+    <section id="contact-us">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title wow fadeInDown">合作交流</h2>
+                <p class="wow fadeInDown">致力于打造一个高质量的舆情监测频台<br> 深入分析，共同探索</p>
+            </div>
+        </div>
+    </section><!--/#contact-us-->
+    
+    <section id="contact">
+        
+        <div class="container">
+            <div class="container contact-info">
+                <div class="row">
+				  <div class="col-sm-4 col-md-4">
+                        <div class="contact-form">
+                            <h3>个人信息</h3>
+
+                            <address>
+                              地址：中国石油大学（华东）<br>
+                              邮箱：liuzy0158@gmail.com<br>
+                              Github: <a href="https://github.com/Liuzycn" style="color:#00008B">Liuzycn</a><br>
+                              电话：+86 13432077189<br>
+                            </address>
+					</div></div>
+                    <div class="col-sm-8 col-md-8">
+                        <div class="contact-form">
+                       
+                            <form id="main-contact-form" name="contact-form">
+                                <div class="form-group">
+                                    <input type="text" name="name" class="form-control" placeholder="姓名" required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" name="email" class="form-control" placeholder="邮箱" required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" name="subject" class="form-control" placeholder="主题" required>
+                                </div>
+                                <div class="form-group">
+                                    <textarea name="message" class="form-control" rows="8" placeholder="正文" required></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary">发送</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>   
+   </section><!--/#bottom-->
+
+    <footer id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    如果您有其它问题，请联系我的邮箱；如果您对其它项目感兴趣，可以关注我的Github<a href="mailto:liuzy0158@gmail.com" class="footer-link"></a>
+                </div>
+                <div class="col-sm-6">
+                    <ul class="social-icons">
+                        <li><a href="mailto:liuzy0158@gmail.com"><i class="fa fa-google-plus fa-2x"></i></a></li>
+                        <li><a href="https://github.com/Liuzycn"><i class="fa fa-github fa-2x"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/analyze.js"></script>
+    <script src="js/contact.js"></script>
+
+</body>
+</html>
